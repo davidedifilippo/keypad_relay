@@ -45,12 +45,12 @@ Inoltre blocchiamo l'alimentazione della bobina del relay ponendo bassa la tensi
 
 Ad ogni ciclo si controlla se è stato premuto un tasto. Se è cosi si memorizza il caratere nella variabile KeyPressed:
 
-KeyPressed = customKeypad.getKey();
-  
-      if (KeyPressed){
-        password[count] = KeyPressed; //memorizzo il carattere 
-        Serial.print(password[count]); //eco del carattere sul monitor seriale
-        count++; //vado avanti di un carattere 
+        KeyPressed = customKeypad.getKey();
+        
+        if (KeyPressed){
+            password[count] = KeyPressed; //memorizzo il carattere 
+            Serial.print(password[count]); //eco del carattere sul monitor seriale
+            count++; //vado avanti di un carattere 
     }
     
 
@@ -63,6 +63,9 @@ All'inizio del programma memorizzo la password per lo sblocco del relè:
     char Master[lunghezza_password] = "1234567";   //password di accesso
 
 La lunghezza della password all'apparenza sembrerebbe 7. In realtà viene memorizzata la stringa '1' '2' '3' '4' '5' '6' '7' e il fine stringa '\0' che è composta di 8 caratteri.
+All'inizio del programma dovrà chiaramente essere dichiarato un vettore di caratteri in cui memorizzare i caratteri immessi dall'utente:
+
+    char password[lunghezza_password];
 
 Ad ogni ciclo controllo se tutti i caratteri della password sono stati inseriti completamente:     
      
