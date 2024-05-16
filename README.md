@@ -112,8 +112,8 @@ La funzione può essere inserita ovunque fuori dal setup e dal loop:
 
     void cancellaPassword()
     {
-      while(count !=0){
-      password[count--] = 0; 
+      while(conta_caratteri  !=0){
+      password[conta_caratteri --] = 0; 
     }
     return;
 }
